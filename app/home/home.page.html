@@ -16,8 +16,8 @@
         <ion-card-title class="nombre">{{user.name.first}} {{user.name.last}}</ion-card-title>
       </ion-card-header>
       
-      <ion-card-content>
-        <ion-item>
+      <ion-card-content class="card">
+        <ion-item [ngClass]="{'male-card': user.gender === 'male','female-card': user.gender === 'female'}" class="card">
 
           <ion-thumbnail slot="start">
             <img class="fotos" [src]="user.picture.thumbnail" alt="{{user.name.first}}">
@@ -25,11 +25,17 @@
 
           <ion-label class="card">
             <p>Email: {{user.email}}</p>
-            <p>Teléfono: {{user.phone}}</p>
             <p>Ciudad: {{user.location.city}}</p>
             <p>País: {{user.location.country}}</p>
             <p>Género: {{user.gender}}</p>
+            <div *ngIf="showMoreInfo">
+              <p>Teléfono: {{ user.phone }}</p>
+              <p>Dirección: {{ user.location.street.name }}, {{
+             user.location.city }}</p>
+             </div>
           </ion-label>
+
+          <ion-button (click)="showMoreInfo = !showMoreInfo" shape="round" class="boton-info">{{ showMoreInfo ? 'Ocultar Información' : 'Mostrar Más Información' }}</ion-button>
 
         </ion-item>
       </ion-card-content>

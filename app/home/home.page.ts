@@ -9,6 +9,8 @@ import { ApiService } from '../services/api.service';//agregar importación
 export class HomePage {
   users: any[] = []; //para almacenar usuarios
   message: string = ""; //para mostrar los mensajes al usuario
+
+  showMoreInfo: boolean = false;
   constructor(private api: ApiService) {}
 
     ngOnInit(){
