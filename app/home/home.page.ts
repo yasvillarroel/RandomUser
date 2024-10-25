@@ -10,7 +10,7 @@ export class HomePage {
   users: any[] = []; //para almacenar usuarios
   message: string = ""; //para mostrar los mensajes al usuario
 
-  showMoreInfo: boolean = false;
+  showMoreInfo: boolean = false;//para el botón de información
   constructor(private api: ApiService) {}
 
     ngOnInit(){

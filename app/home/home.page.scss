@@ -59,7 +59,7 @@ ion-thumbnail {
   width: 100px;
   height: 100px;
 }
-
+//Colores de los géneros
 .male-card {
   background-color: lightblue;
   border-radius: 10px;
@@ -70,14 +70,14 @@ ion-thumbnail {
   border-radius: 10px;
   padding: 10px;
  }
-
+//boton de información (ACTIVIDAD 2)
  .boton-info{
   --background: #1c2833 ;
   --background-hover: #1c2833 ;
   --color: #ffffff;
   --padding: 20px;
  }
-
+//se agregó esto de diseño responsivo (ACTIVIDAD 2)
 .card {
   max-width: 700px;
   margin: auto;
